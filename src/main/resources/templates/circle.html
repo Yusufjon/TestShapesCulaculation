@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Testing project</title>
+        <link rel="stylesheet" href="form.css" >
+        <script src="form.js"></script>
+    </head>
+    <body >
+        <div class="container">
+            <div id="form-main">
+            
+                <div id="form-div">
+            <h3 style="align:center"><i>Pассчитать  площад и  периметр круга :</h3>
+                    <form action="#" th:action="@{/circle}" th:Object="${model}" method="POST" class="montform" id="reused_form" >
+                        <p class="name">
+                            <input type="text" th:field="*{r}" class="feedback-input" placeholder="radius"   />
+                        </p>
+                        
+                        <b>
+                        <h3>результат:</h3>
+                        <p class="name" th:text="${area}">
+                         <p class="name" th:text="${result}">
+                                             
+                            
+                        </p></b>
+                        <div class="submit">
+                            <button type="submit" name="calculateArea"  class="button-blue">Pезультат:</button>
+                            <div class="ease"></div>
+                        </div>
+                   <!--       <div class="submit">
+                            <button type="submit" name="calculatePerimeterCircle"  class="button-blue">Pезультат периметр:</button>
+                            <div class="ease"></div>
+                        </div> -->
+                               <a href="circle"> <p style="color:red">площадь круга</p></a>
+                            <a href="squareArea"> <p style="color:blue">площадь квадрата</p></a>
+                         <a href="/"> <p style="color:green">периметр прямоугольника и квадрата</p></a>
+                                 <a href="rectangleArea"> <p style="color:black">Площадь прямоугольника</p></a>
+                                       <a href="triangle"> <p style="color:pink">Площадь треугольника</p></a>
+                                          <a href="perTriangle"> <p style="color:pink">периметр треугольника</p></a>
+                    </form>
+               
+                   
+            </div>
+        </div>
+    </body>
+</html>
